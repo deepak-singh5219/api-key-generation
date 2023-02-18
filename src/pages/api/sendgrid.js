@@ -1,6 +1,5 @@
 import sendgrid from "@sendgrid/mail";
-const SENDGRID_API_KEY = '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'
-sendgrid.setApiKey(SENDGRID_API_KEY);
+sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
 
 async function sendEmail(req, res) {
     const {email, accessToken} = req.body;
